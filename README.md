@@ -56,7 +56,7 @@ solver->allocate(queues);
 // Allocate a temporary device-side buffer
 solver->allocateTmp();
 
-// Solve system [A_1 (x) M_2 + M_1 (x) A_2 + ch * M_1 (x) M(_2)] u = f
+// Solve system [A_1 (x) M_2 + M_1 (x) A_2 + ch * M_1 (x) M_2] u = f
 double ch = 0.2;
 solver->run(queues, devMemF, 1, &ch);
 ```
